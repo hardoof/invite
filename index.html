@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Flipbook Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <style>
+    body {
+      background: #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #flipbook {
+      width: 800px;
+      height: 600px;
+    }
+    #flipbook .page {
+      width: 400px;
+      height: 600px;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="flipbook">
+  <div class="page" style="background-image: url('image1.jpg');"></div>
+  <div class="page" style="background-image: url('image2.jpg');"></div>
+  <div class="page" style="background-image: url('image3.jpg');"></div>
+</div>
+
+<script>
+  $("#flipbook").turn({
+    width: 800,
+    height: 600,
+    autoCenter: true
+  });
+</script>
+
+</body>
+</html>
