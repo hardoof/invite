@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>PDF Flipbook Example</title>
+  <title>My Flipbook</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
   <style>
@@ -23,6 +23,7 @@
       height: 600px;
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
     }
   </style>
 </head>
@@ -35,10 +36,12 @@
 </div>
 
 <script>
-  $("#flipbook").turn({
-    width: 800,
-    height: 600,
-    autoCenter: true
+  $(document).ready(function() {
+    $("#flipbook").turn({
+      width: 800,
+      height: 600,
+      autoCenter: true
+    });
   });
 </script>
 
